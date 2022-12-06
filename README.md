@@ -17,4 +17,5 @@ or
 python TCP-CAS-9_Image_Decoder.py -p (--port) 8100 -ip 127.0.0.1 -o out.png
 ```
 Note! After decoding, you can get a photo by pressing the CTRL + C key combination in the command line window. If you close it normally, the photo will not be saved!
+
 Mode for sondmodem: FSK G3RUH 4800bd.
