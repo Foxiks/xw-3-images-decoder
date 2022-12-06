@@ -1,12 +1,12 @@
 # XW-3 (CAS-9) Satellite Images decoder
 This is an XW-3 (CAS-9) Satellite Images decoder that works in conjunction with HS_soundmodem 
 
-![1](1.jpg)
+![1](https://github.com/Foxiks/xw-3-images-decoder/blob/main/img/1.png)
 
 ## Using
 Before use, specify the port for KISS Server in your soudmodem settings. Settings->Devices->KISS Server port
 
-![2](2.jpg)
+![2](https://github.com/Foxiks/xw-3-images-decoder/blob/main/img/2.png)
 
 After that run start.bat for Windows or:
 ```sh
