@@ -19,3 +19,5 @@ python TCP-CAS-9_Image_Decoder.py -p (--port) 8100 -ip 127.0.0.1 -o out.png
 Note! After decoding, you can get a photo by pressing the CTRL + C key combination in the command line window. If you close it normally, the photo will not be saved!
 
 Mode for sondmodem: FSK G3RUH 4800bd.
+
+To request a photo, send a DTMF code to 2m band. Read more on pages 20-21 [here](https://forum.amsat-dl.org/cms/index.php?attachment/7338-xw-3-cas-9-amateur-radio-satellite-user-s-manual-v2-0-komprimiert-pdf/)
