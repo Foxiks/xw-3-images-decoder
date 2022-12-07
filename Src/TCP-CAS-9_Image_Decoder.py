@@ -1,4 +1,5 @@
-import binascii, os, argparse, cv2, numpy, math, sys, socket
+import binascii, os, argparse, cv2, sys, socket
+import numpy as np
 parser = argparse.ArgumentParser()
 parser.add_argument("-p", "--port", help="port")
 parser.add_argument("-ip", "--ip", help="ip")
@@ -48,14 +49,19 @@ if __name__ == "__main__":
             except socket.timeout:
                 continue
     except KeyboardInterrupt:
-        with open('image.data', "rb") as image:
-            f = image.read()
+        with open('image.data', "rb") as image1:
+            f = image1.read()
         size = os.path.getsize('image.data')
         l = int(size)/int(256)
         if(float(l).is_integer() == True):
             bbyteArray = bytearray(f)
-            grayImage = numpy.array(bbyteArray).reshape(int(l), int(256))
+            grayImage = np.array(bbyteArray).reshape(int(l), int(256))
             print("Saving 256 px..." + " "*100)
             cv2.imwrite(outfile, grayImage)
+            print("Saving 256 px normalized..." + " "*100)
+            alpha = 1.5 # Contrast control (1.0-3.0)
+            beta = 1.7 # Brightness control (0-100)
+            manual_result = cv2.convertScaleAbs(grayImage, alpha=alpha, beta=beta)
+            cv2.imwrite(str('normalized_')+outfile, manual_result)
             print("Saved!" + " "*100)
             sys.exit()
